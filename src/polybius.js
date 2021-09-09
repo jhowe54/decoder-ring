@@ -68,7 +68,6 @@ const polybiusModule = (function () {
       numberArray.push(substring)
       
     }
-    console.log(numberArray);
     return numberArray; 
   }
   
