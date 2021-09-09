@@ -13,7 +13,7 @@ const caesarModule = (function () {
      if (!shift || shift === 0 || shift < -25 || shift > 25) {
       return false;
     }
-    
+    //sets direction of the shift based on whether decoding or encoding
     if (encode) {
     shift *= 1
     } else {
@@ -40,7 +40,7 @@ const caesarModule = (function () {
     
    
   }
-  // changes the input into an array of characters
+  // changes the input into an array of characters and makes all characters lowercase
   function inputToArrayOfCharacters (input) {
     let inputArray = [];
     for(let i = 0; i < input.length; i++) {
