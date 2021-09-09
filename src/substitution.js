@@ -54,7 +54,6 @@ const substitutionModule = (function () {
     }
       return character;
     });
-    console.log(decodeCipher);
     return codedMessage.join("");
     }
 
