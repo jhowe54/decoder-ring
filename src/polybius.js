@@ -52,7 +52,6 @@ const polybiusModule = (function () {
     }
   }
   
-  
   //decode helper function
   function splitEveryTwoNumbers(input) {
     let numberArray = [];
@@ -72,7 +71,6 @@ const polybiusModule = (function () {
     console.log(numberArray);
     return numberArray; 
   }
-  
   
   //helper function to convert the input from the polybius() function to an array of characters
   function inputToArrayOfCharacters(input) { 
