@@ -6,50 +6,73 @@
 const caesarModule = (function () {
   // you can add any code you want within this function scope
 
-  
- let alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-  
+  let alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+
   function caesar(input, shift, encode = true) {
-     if (!shift || shift === 0 || shift < -25 || shift > 25) {
+    if (!shift || shift === 0 || shift < -25 || shift > 25) {
       return false;
     }
     //sets direction of the shift based on whether decoding or encoding
     if (encode) {
-    shift *= 1
+      shift *= 1;
     } else {
       shift *= -1;
     }
-    let inputArray = inputToArrayOfCharacters(input); 
+    let inputArray = inputToArrayOfCharacters(input);
     const codedMessage = inputArray.map((character) => {
       let shiftedIndex = alphabet.indexOf(character) + shift;
-      
-      if(shiftedIndex > 25) {
+
+      if (shiftedIndex > 25) {
         shiftedIndex -= 26;
       }
-      if(shiftedIndex < 0) {
+      if (shiftedIndex < 0) {
         shiftedIndex += 26;
-      } 
-      if(character === " " || !alphabet.includes(character)) {
+      }
+      if (character === " " || !alphabet.includes(character)) {
         return character;
       }
-      character = alphabet[shiftedIndex]
+      character = alphabet[shiftedIndex];
       return character;
-    })
+    });
 
     return codedMessage.join("");
-    
-   
   }
   // changes the input into an array of characters and makes all characters lowercase
-  function inputToArrayOfCharacters (input) {
+  function inputToArrayOfCharacters(input) {
     let inputArray = [];
-    for(let i = 0; i < input.length; i++) {
+    for (let i = 0; i < input.length; i++) {
       let lowercase = input[i].toLowerCase();
       inputArray.push(lowercase);
     }
     return inputArray;
   }
-  
 
   return {
     caesar,
