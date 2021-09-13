@@ -4,7 +4,7 @@
 // of the anonymous function on line 6
 
 const polybiusModule = (function () {
-  // you can add any code you want within this function scope
+ 
 
   function polybius(input, encode = true) {
     
@@ -53,6 +53,7 @@ const polybiusModule = (function () {
   }
   
   //decode helper function
+  //makes a substring out of every two numbers of the input and converts them to substrings and pushes each substring into an array
   function splitEveryTwoNumbers(input) {
     let numberArray = [];
     
@@ -71,7 +72,8 @@ const polybiusModule = (function () {
     return numberArray; 
   }
   
-  //helper function to convert the input from the polybius() function to an array of characters
+  //helper function for when we are encoding 
+  //takes the original input and pushes each character to an array while simultaneously making each of the characters lowercase
   function inputToArrayOfCharacters(input) { 
      let inputArray = [];
      for(let i = 0; i < input.length; i++) {
