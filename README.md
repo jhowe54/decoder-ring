@@ -10,7 +10,7 @@
 ![Caesar Shift](/screenshots/caesar-encode.png?raw=true "Caesar Shift")
 The Caesar Shift takes the standard alphabet and then shifts the value of each letter by the user-defined shift amount.
 
-e.g. If the shift is 5, the letter _'a'_ becomes _'f'_. If the shift is -5, the letter _'a'_ becomes _'v'_ ( in this case because not letter comes before '_a_', the shift wraps backwards through the alphabet)
+e.g. If the shift is 5, the letter _'a'_ becomes _'f'_. If the shift is -5, the letter _'a'_ becomes _'v'_ ( in this case because '_a_' is the first letter in the alphabet, the shift wraps backwards through the alphabet)
 
 Notes: 
 * the shift amount is constrained between -25 and 25. Otherwise you will receive an error. 
